@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Portfolio Design System - Dark Theme with Vibrant Accents
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Vibrant colorful theme */
+    --background: 260 50% 6%;
+    --foreground: 0 0% 98%;
+
+    --card: 260 50% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 260 50% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Rainbow gradient primary colors */
+    --primary: 320 90% 65%;
+    --primary-foreground: 260 50% 6%;
+    --primary-glow: 280 100% 75%;
+
+    /* Glass morphism secondary */
+    --secondary: 260 50% 10%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 260 50% 12%;
+    --muted-foreground: 220 15% 70%;
+
+    /* Multi-color accents */
+    --accent: 200 100% 60%;
+    --accent-foreground: 0 0% 98%;
+    --accent-secondary: 60 90% 60%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 47% 12%;
+    --input: 222 47% 8%;
+    --ring: 250 100% 70%;
+
+    --radius: 1rem;
+
+    /* Portfolio specific colors */
+    --hero-gradient-start: 320 90% 65%;
+    --hero-gradient-end: 200 100% 60%;
+    --hero-gradient-third: 60 90% 60%;
+    --glass-bg: 260 50% 10%;
+    --glass-border: 320 90% 65%;
+    --success: 142 76% 50%;
+    --warning: 45 100% 65%;
+    
+    /* Custom rainbow gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--hero-gradient-start)) 0%, hsl(var(--hero-gradient-end)) 50%, hsl(var(--hero-gradient-third)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--glass-bg) / 0.7) 0%, hsl(var(--glass-bg) / 0.4) 100%);
+    --gradient-border: linear-gradient(145deg, hsl(var(--glass-border) / 0.4) 0%, hsl(var(--accent-secondary) / 0.3) 100%);
+    
+    /* Shadows and glows */
+    --shadow-glass: 0 8px 32px hsl(var(--background) / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 4px 20px hsl(var(--background) / 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Light mode overrides (keeping dark as default for portfolio) */
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --primary: 250 100% 60%;
+    --primary-foreground: 210 40% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background: radial-gradient(ellipse at top, hsl(var(--background)) 0%, hsl(222 47% 2%) 100%);
+    min-height: 100vh;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: var(--gradient-card);
+    backdrop-filter: blur(16px);
+    border: 1px solid hsl(var(--border));
+    box-shadow: var(--shadow-glass);
+  }
+
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero-gradient {
+    background: var(--gradient-primary);
+  }
+}
+
+/* Infinite scroll animation for skills */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
