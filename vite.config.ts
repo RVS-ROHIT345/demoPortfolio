@@ -19,7 +19,7 @@ export default defineConfig(({ mode }) => ({
   //     "@": path.resolve(__dirname, "./src"),
   //   },
   // },
-  base:"demoPortfolio",
+  base:"rvs-rohit345.github.io/demoPortfolio/",
   plugins: [react()],
   resolve: {
     alias: {
