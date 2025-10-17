@@ -84,7 +84,7 @@ const About = () => {
           >
             <div className="glass-card p-4 sm:p-6 rounded-2xl sm:rounded-3xl">
               <div className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 bg-gradient-primary rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto">
-                <div className="text-white text-4xl sm:text-5xl lg:text-6xl font-bold">JD</div>
+                <div className="text-white text-4xl sm:text-5xl lg:text-6xl font-bold">VSR</div>
               </div>
             </div>
           </motion.div>
