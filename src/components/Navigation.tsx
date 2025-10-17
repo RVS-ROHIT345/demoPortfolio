@@ -63,7 +63,7 @@ const Navigation = () => {
             <div className="flex items-center">
               <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-primary to-accent overflow-hidden border-2 border-background shadow-lg">
                 <div className="w-full h-full bg-muted flex items-center justify-center text-sm sm:text-lg font-semibold">
-                  VSR
+                  VR
                 </div>
               </div>
             </div>
