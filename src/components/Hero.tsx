@@ -184,7 +184,7 @@ const Hero = () => {
           {/* Social Links */}
           <motion.div variants={fadeInUp} className="flex items-center justify-center gap-4 pt-4">
             <motion.a
-              href="https://www.linkedin.com/in/venakatasatyarohitramena/" // Replace with your LinkedIn URL
+              href="https://www.linkedin.com/in/venakataramena/" // Replace with your LinkedIn URL
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-2 px-4 py-2 bg-muted/50 backdrop-blur-sm rounded-full border border-border/50 text-muted-foreground hover:bg-primary/10 hover:border-primary/30 hover:text-primary transition-all duration-300"

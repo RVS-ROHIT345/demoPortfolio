@@ -104,6 +104,8 @@ const Contact = () => {
           </motion.p>
         </motion.div>
 
+        {/* Commented out Send me a message section */}
+        {/* 
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 justify-center lg:justify-start">
           <motion.div
             variants={itemVariants}
@@ -182,76 +184,97 @@ const Contact = () => {
               </form>
             </div>
           </motion.div>
+        */}
 
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            transition={{ delay: 0.5 }}
-            className="space-y-6 sm:space-y-8 flex flex-col items-center lg:items-start"
-          >
-            {contactInfo.map((info, index) => (
+        {/* Contact Section - Two Column Layout */}
+        <div className="flex justify-center">
+          <div className="w-full max-w-6xl">
+            <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-stretch">
+              
+              {/* Left Side - Let's Connect */}
               <motion.div
-                key={info.label}
-                variants={itemVariants}
-                whileHover={{ scale: 1.02, x: 10 }}
-                className="glass-card p-4 sm:p-6 rounded-xl sm:rounded-2xl cursor-pointer group w-full max-w-sm lg:max-w-none"
+                variants={containerVariants}
+                initial="hidden"
+                animate={inView ? "visible" : "hidden"}
+                transition={{ delay: 0.3 }}
+                className="flex items-center justify-center lg:justify-start"
               >
-                <a href={info.href} className="flex items-center">
-                  <div className="p-3 sm:p-4 bg-primary/10 rounded-lg sm:rounded-xl mr-4 sm:mr-6 group-hover:bg-primary/20 transition-colors">
-                    <info.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                <div className="glass-card p-6 sm:p-8 lg:p-10 rounded-2xl sm:rounded-3xl text-center w-full h-full flex flex-col justify-center">
+                  <h4 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6">
+                    Let's <span className="gradient-text">Connect</span>
+                  </h4>
+                  <p className="text-muted-foreground mb-6 sm:mb-8 text-sm sm:text-base lg:text-lg leading-relaxed">
+                    I'm always interested in hearing about new opportunities and 
+                    exciting projects. Don't hesitate to reach out!
+                  </p>
+                  
+                  {/* Social Links */}
+                  <div className="flex justify-center space-x-4 sm:space-x-6">
+                    <motion.a
+                      href="mailto:ramenavenkata@gmail.com"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="inline-block"
+                    >
+                      <Button 
+                        variant="outline" 
+                        size="icon" 
+                        className="glass-card border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-300 w-12 h-12 sm:w-14 sm:h-14"
+                      >
+                        <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
+                      </Button>
+                    </motion.a>
+                    <motion.a
+                      href="https://www.linkedin.com/in/venakataramena/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="inline-block"
+                    >
+                      <Button 
+                        variant="outline" 
+                        size="icon" 
+                        className="glass-card border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-300 w-12 h-12 sm:w-14 sm:h-14"
+                      >
+                        <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
+                      </Button>
+                    </motion.a>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-base sm:text-lg">{info.label}</h4>
-                    <p className="text-muted-foreground text-sm sm:text-base">{info.value}</p>
-                  </div>
-                </a>
+                </div>
               </motion.div>
-            ))}
 
-            <motion.div
-              variants={itemVariants}
-              className="glass-card p-6 sm:p-8 rounded-2xl sm:rounded-3xl text-center w-full max-w-sm lg:max-w-none"
-            >
-              <h4 className="text-lg sm:text-xl font-semibold mb-4">Let's Connect</h4>
-              <p className="text-muted-foreground mb-6 text-sm sm:text-base">
-                I'm always interested in hearing about new opportunities and 
-                exciting projects. Don't hesitate to reach out!
-              </p>
-              <div className="flex justify-center space-x-4">
-                <motion.a
-                  href="mailto:ramenavenkata@gmail.com"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="inline-block"
-                >
-                  <Button 
-                    variant="outline" 
-                    size="icon" 
-                    className="glass-card border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-300"
-                  >
-                    <Mail className="w-5 h-5" />
-                  </Button>
-                </motion.a>
-                <motion.a
-                  href="https://www.linkedin.com/in/your-linkedin-profile"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="inline-block"
-                >
-                  <Button 
-                    variant="outline" 
-                    size="icon" 
-                    className="glass-card border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-300"
-                  >
-                    <Linkedin className="w-5 h-5" />
-                  </Button>
-                </motion.a>
-              </div>
-            </motion.div>
-          </motion.div>
+              {/* Right Side - Contact Information */}
+              <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                animate={inView ? "visible" : "hidden"}
+                transition={{ delay: 0.5 }}
+                className="flex flex-col justify-center h-full"
+              >
+                <div className="space-y-4 sm:space-y-6 h-full flex flex-col justify-center">
+                  {contactInfo.map((info, index) => (
+                    <motion.div
+                      key={info.label}
+                      variants={itemVariants}
+                      whileHover={{ scale: 1.02, x: 10 }}
+                      className="glass-card p-4 sm:p-6 rounded-xl sm:rounded-2xl cursor-pointer group hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 flex-1"
+                    >
+                      <a href={info.href} className="flex items-center h-full">
+                        <div className="p-3 sm:p-4 bg-primary/10 rounded-lg sm:rounded-xl mr-4 sm:mr-6 group-hover:bg-primary/20 transition-colors">
+                          <info.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="font-semibold text-base sm:text-lg mb-1">{info.label}</h4>
+                          <p className="text-muted-foreground text-sm sm:text-base break-all">{info.value}</p>
+                        </div>
+                      </a>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

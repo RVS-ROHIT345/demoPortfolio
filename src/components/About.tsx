@@ -47,7 +47,7 @@ const About = () => {
             About <span className="gradient-text">Me</span>
           </motion.h2>
           <motion.p variants={itemVariants} className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I'm a passionate full-stack developer with over 3 years of experience creating 
+            I'm a passionate full-stack developer with over 4 years of experience creating 
             innovative digital solutions. I love turning complex problems into simple, 
             beautiful, and intuitive designs.
           </motion.p>
