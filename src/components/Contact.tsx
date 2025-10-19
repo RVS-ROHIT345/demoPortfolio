@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useForm } from 'react-hook-form';
-import { Send, Mail, MapPin, Phone } from 'lucide-react';
+import { Send, Mail, MapPin, Phone, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -219,9 +219,36 @@ const Contact = () => {
                 exciting projects. Don't hesitate to reach out!
               </p>
               <div className="flex justify-center space-x-4">
-                <Button variant="outline" size="icon" className="glass-card border-primary/30 hover:border-primary">
-                  <Mail className="w-5 h-5" />
-                </Button>
+                <motion.a
+                  href="mailto:ramenavenkata@gmail.com"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-block"
+                >
+                  <Button 
+                    variant="outline" 
+                    size="icon" 
+                    className="glass-card border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-300"
+                  >
+                    <Mail className="w-5 h-5" />
+                  </Button>
+                </motion.a>
+                <motion.a
+                  href="https://www.linkedin.com/in/your-linkedin-profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-block"
+                >
+                  <Button 
+                    variant="outline" 
+                    size="icon" 
+                    className="glass-card border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-300"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                  </Button>
+                </motion.a>
               </div>
             </motion.div>
           </motion.div>
