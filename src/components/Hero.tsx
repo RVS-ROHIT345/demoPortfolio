@@ -102,7 +102,7 @@ const Hero = () => {
           {/* Name Tag */}
           <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted/50 backdrop-blur-sm border border-border/50">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-muted-foreground tracking-wide">Venkata Satya Rohit Ramena</span>
+            <span className="text-sm font-medium text-muted-foreground tracking-wide">Venkata Ramena</span>
           </motion.div>
 
           {/* Main Title */}
@@ -165,7 +165,7 @@ const Hero = () => {
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </button>
             <a 
-              href="https://drive.google.com/file/d/1wcbsdtratpOZZSbiYmqJdsPWcu7XQSlG/view?usp=sharing"
+              href="https://drive.google.com/file/d/1cheaT_JQgIZQfw9Tysb-EL4QfIn4O2_j/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => {

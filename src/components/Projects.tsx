@@ -127,7 +127,7 @@ const Projects = () => {
                     ))}
                   </div>
                   
-                  <div className="flex items-center flex-col sm:flex-row gap-2 sm:gap-4">
+                  {/* <div className="flex items-center flex-col sm:flex-row gap-2 sm:gap-4">
                     <Button
                       size="sm"
                       className="hero-gradient text-white hover:scale-105 transition-transform w-full sm:w-auto"
@@ -149,7 +149,7 @@ const Projects = () => {
                         <span className="text-sm">Code</span>
                       </a>
                     </Button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </motion.div>
