@@ -19,7 +19,7 @@ const Experience = () => {
       title: "Software Developer",
       company: "Cognizant",
       location: "Chennai, Tamil Nadu, India", 
-      duration: "May 2020 - Jan 2023",
+      duration: "Aug 2018 - Dec 2022",
       description: [
         "Built and scaled web applications with React.js, Angular, and Spring Boot, collaborating with UX designers and stakeholders to deliver customized, high-performing solutions that improved client satisfaction.",
         "Optimized REST APIs and React.js state management (Redux, Context API), boosting data flow efficiency and responsiveness across booking and transaction modules.",
